@@ -5,7 +5,7 @@
 InfluxDB/Grafana monitoring system for Victron SmartSolar MPPT charge controller with automated three-tier downsampling for efficient long-term data retention.
 
 **This repository provides the VPS/server component.** For edge data collection, combine with:
-→ **[victron-edge-collector](https://github.com/simonbuehler/victron-edge-collector)** - Raspberry Pi Node-RED collector with automatic replication
+→ **[nodered-victron-edge-collector](https://github.com/simonbuehler/nodered-victron-edge-collector)** - Raspberry Pi Node-RED collector with automatic replication
 
 ![Screenshot of Dashboard](image.png)
 
@@ -210,7 +210,7 @@ Duration: ~1-2 hours for 12 months (depending on data volume).
 
 ## Related Projects
 
-- **[victron-edge-collector](https://github.com/simonbuehler/victron-edge-collector)** - Raspberry Pi edge data collector (companion project)
+- **[nodered-victron-edge-collector](https://github.com/simonbuehler/nodered-victron-edge-collector)** - Raspberry Pi edge data collector (companion project)
 
 ---
 
