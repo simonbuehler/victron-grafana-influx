@@ -22,7 +22,7 @@ InfluxDB/Grafana monitoring system for Victron SmartSolar MPPT charge controller
 
 | Bucket       | Retention | Resolution | Query Range  | Purpose                   |
 | ------------ | --------- | ---------- | ------------ | ------------------------- |
-| `victron`    | Infinite  | 1-5s       | ≤72h         | Live monitoring, raw data |
+| `victron`    | 180 days  | 1-5s       | ≤72h         | Live monitoring, raw data |
 | `victron_5m` | 730 days  | 5 minutes  | 72h-720h     | Medium-term (2 years)     |
 | `victron_1h` | Infinite  | 1 hour     | >720h (30d+) | Long-term history         |
 
@@ -74,8 +74,8 @@ backfill/
 ### 1. Create Buckets
 
 ```bash
-influx bucket create -n victron -r 0 -o wolke          # infinite retention
-influx bucket create -n victron_5m -r 17520h -o wolke  # 730 days
+influx bucket create -n victron -r 4320h -o wolke      # 180 days (6 months)
+influx bucket create -n victron_5m -r 17520h -o wolke  # 730 days (2 years)
 influx bucket create -n victron_1h -r 0 -o wolke       # infinite retention
 ```
 
